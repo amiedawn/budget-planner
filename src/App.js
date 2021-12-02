@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import AddExpense from './components/AddExpense/AddExpense';
+import Budget from './components/Budget/Budget';
+import Expenses from './components/Expenses/Expenses';
+import Remaining from './components/Remaining/Remaining';
+import Spent from './components/Spent/Spent';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h2>My Budget Planner</h2>
       </header>
+      <Budget />
+      <Remaining />
+      <Spent />
+      <Expenses />
+      <AddExpense />
     </div>
   );
-}
+};
 
 export default App;
