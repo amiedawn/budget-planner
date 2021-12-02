@@ -8,12 +8,18 @@ import Spent from './components/Spent/Spent';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h2>My Budget Planner</h2>
-      </header>
-      <Budget />
-      <Remaining />
-      <Spent />
+      <h1>My Budget Planner</h1>
+      <div className="wrapper">
+        <div>
+          <Budget />
+        </div>
+        <div>
+          <Remaining />
+        </div>
+        <div>
+          <Spent />
+        </div>
+      </div>
       <Expenses />
       <AddExpense />
     </div>

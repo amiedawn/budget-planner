@@ -1,9 +1,15 @@
 .App-header {
   background-color: white;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  padding: 10px 0 0 25px;
-  font-size: calc(10px + 2vmin);
+  font-size: 20px;
   color: black;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper > div {
+  width: 30%;
+  height: 100px;
 }

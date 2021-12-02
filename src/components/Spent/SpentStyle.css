@@ -1,0 +1,11 @@
+.spent-container {
+  background-color: lightblue;
+  display: flex;
+}
+
+.spent-title {
+  color: blue;
+  height: 100px;
+  line-height: 100px;
+  padding-left: 15px;
+}
