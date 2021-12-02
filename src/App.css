@@ -7,9 +7,10 @@
 .wrapper {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .wrapper > div {
   width: 30%;
-  height: 100px;
+  height: 3em;
 }

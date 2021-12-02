@@ -1,3 +1,26 @@
 .add-expense-container {
   margin-top: 20px;
 }
+
+.form-layout {
+
+}
+
+.input-expense {
+  display: block;
+}
+
+#name {
+  width: 30%;
+}
+
+#cost {
+  width: 60%;
+}
+
+.btn-save {
+  background-color: blue;
+  color: white;
+  height: 35px;
+  width: 55px;
+}
