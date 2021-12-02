@@ -1,0 +1,14 @@
+tr {
+  border: 2px solid black;
+  width: 100%;
+}
+
+#expense-amount {
+  background-color: blue;
+  border-radius: 3px;
+  color: white;
+}
+
+.material-icons-round {
+  width: 2px;
+}

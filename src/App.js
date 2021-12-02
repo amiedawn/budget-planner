@@ -1,5 +1,5 @@
 import './App.css';
-import AddExpense from './components/AddExpense/AddExpense';
+import AddExpenseForm from './components/AddExpense/AddExpenseForm';
 import Budget from './components/Budget/Budget';
 import Expenses from './components/Expenses/Expenses';
 import Remaining from './components/Remaining/Remaining';
@@ -21,7 +21,7 @@ function App() {
         </div>
       </div>
       <Expenses />
-      <AddExpense />
+      <AddExpenseForm />
     </div>
   );
 };
