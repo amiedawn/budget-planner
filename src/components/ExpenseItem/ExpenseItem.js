@@ -5,7 +5,7 @@ const ExpenseItem = ({expense}) => {
   const {id, name, amount} = expense;
   return <li className="item">
     <div className="info">
-      <span className="expense">{name}</span>
+      <span className="name">{name}</span>
       <span className="amount">${amount}</span>
       <button className="delete-btn" aria-label="delete button">
         <TiDelete />

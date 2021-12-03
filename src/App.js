@@ -70,6 +70,12 @@ function App() {
     }
   };
 
+  const totalExpenses = (e) => {
+    expenses.reduce((prev, curr) => {
+      return (prev += parseInt(curr.amount));
+    }, 0)}
+  
+
   return (
     <div className="App">
       <h1>My Budget Planner</h1>
@@ -81,20 +87,28 @@ function App() {
           <Remaining />
         </div>
         <div>
-          <Spent />
+          <Spent totalExpenses={totalExpenses} />
         </div>
       </div>
       <Expenses expenses={expenses} />
-      <AddExpenseForm name={name} amount={amount} handleName={handleName} handleAmount={handleAmount} handleSubmit={handleSubmit} />
+      <AddExpenseForm
+        name={name}
+        amount={amount}
+        handleName={handleName}
+        handleAmount={handleAmount}
+        handleSubmit={handleSubmit}
+      />
       <h1>
         Total spending: <span className="total">
-        ${expenses.reduce((acc, curr) => {
-            return (acc += parseInt(curr.amount));
+        ${expenses.reduce((prev, curr) => {
+            return (prev += parseInt(curr.amount));
         }, 0)}
 
         </span>
       </h1>
-    </div>
+
+      <div className="total"></div>
+    </div>  
   );
 };
 

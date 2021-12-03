@@ -1,10 +1,5 @@
-/* tr {
-  border: 2px solid black;
-  width: 100%;
-} */
 .expenses-container {
   margin-top: 100px;
-
 }
 
 #expenses-title {
@@ -17,31 +12,37 @@
   height: 2.5em;
 }
 
-.format-right {
-  float: right;
+.expense-list {
+  margin: 1rem 0 0 0;
+  list-style-type: none;
+  border: 1px solid black;
+  padding: 10px;
+  display: grid;
 }
 
-.expense-row {
+/* layout expense rows */
+div.info {
+  padding: 10px;
+  border: 1px solid black;
+  display: flex;
   justify-content: space-between;
-  width: 800px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: black;
 }
 
-#expense-amount {
+span.amount {
+  font-weight: 300;
+  font-size: 1rem;
+  color: white;;
   background-color: blue;
-  border-radius: 3px;
-  color: white;
-  padding: 5px;
+  border-radius: 2px;
+  padding: 5px 10px; 
 }
 
-/* .material-icons {
+.delete-btn {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
   font-size: 24px;  /* Preferred icon size */
-  /* display: inline-block;
+  display: inline-block;
   line-height: 1;
   text-transform: none;
   letter-spacing: normal;
@@ -49,14 +50,14 @@
   white-space: nowrap;
   direction: ltr;
 
-  /* Support for all WebKit browsers. */
-  /* -webkit-font-smoothing: antialiased; */
+ /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased; 
   /* Support for Safari and Chrome. */
-  /* text-rendering: optimizeLegibility; */
+  text-rendering: optimizeLegibility;
 
   /* Support for Firefox. */
-  /* -moz-osx-font-smoothing: grayscale; */
+  -moz-osx-font-smoothing: grayscale; 
 
   /* Support for IE. */
-  /* font-feature-settings: 'liga';
-} */
+   font-feature-settings: 'liga';
+}

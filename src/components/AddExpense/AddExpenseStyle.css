@@ -2,21 +2,17 @@
   margin-top: 20px;
 }
 
-.form-layout {
+/* .form-group {
+  flex: 0 0 50%;
+} */
 
-}
-
-.input-expense {
-  display: block;
-}
-
-#name {
-  width: 30%;
+ #name {
+  flex: 0 0 50%;
 }
 
 #cost {
-  width: 60%;
-}
+  flex: 0 0 50%;
+} 
 
 .btn-save {
   background-color: blue;
