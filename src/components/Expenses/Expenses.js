@@ -19,7 +19,7 @@ function Expenses(props) {
               <div className="format-right">
                 <td id="expense-amount">$50</td>
                 <td id="expense-remove">
-                  <span className="material-icons-round">cancel</span>
+                  <span className="material-icons">cancel</span>
                 </td>
               </div>
             </tr>
