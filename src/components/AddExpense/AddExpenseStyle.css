@@ -2,17 +2,24 @@
   margin-top: 20px;
 }
 
-/* .form-group {
-  flex: 0 0 50%;
-} */
+th {
+  font-size: 20px;
+  text-align: left;
+}
 
- #name {
+#name {
   flex: 0 0 50%;
 }
 
 #cost {
   flex: 0 0 50%;
 } 
+
+.form-control {
+  width: 25em;
+  height: 2em;
+  margin: 10px 10px 10px 0;
+}
 
 .btn-save {
   background-color: blue;
