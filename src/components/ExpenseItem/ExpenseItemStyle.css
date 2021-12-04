@@ -1,4 +1,4 @@
-.item {
+/* .item {
   background-color: var(--mainWhite);
   line-height: 1.5rem;
   padding: 10px 20px;
@@ -7,25 +7,4 @@
   display: flex;
   justify-content: space-between;
   transition: all 0.3s linear;
-}
-
-div.info {
-  flex: 0 0 60%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-}
-.name {
-  margin-right: 2rem;
-  text-transform: capitalize;
-}
-.amount {
-  font-weight: 300;
-  font-size: 20px;
-  color: var(--mainWhite);
-  background-color: blue;
-  border-radius: 2px;
-  padding: 1px 3px;
-
-}
+} */
