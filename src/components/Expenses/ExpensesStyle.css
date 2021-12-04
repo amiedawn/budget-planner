@@ -1,4 +1,4 @@
-.expenses-container {
+ .expenses-container {
   margin-top: 100px;
 }
 
@@ -14,20 +14,20 @@
 
 .expense-list {
   /* margin: 1rem 0 0 0; */
-  list-style-type: none;
+  list-style-type: none; 
   /* border: 1px solid black; */
-  padding: 8px; 
+   padding: 8px; 
 
   display: grid;
 }
 
 /* layout expense rows */
-div.info {
+ div.info {
   padding: 10px;
   border: 1px solid black;
-  display: inline-grid;
+  display: inline-grid; 
    /* grid-template-columns: 80% 8% 8%;  */
-  justify-content: space-between;
+ justify-content: space-between;
   width: 100%;
 }
  #item1 {
@@ -50,9 +50,9 @@ div.amount {
   border-radius: 12px;
   padding: 5px 10px; 
   justify-content: end;
- }
+ } 
 
-.delete-btn {
+ .delete-btn {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
@@ -75,4 +75,4 @@ div.amount {
 
   /* Support for IE. */
    font-feature-settings: 'liga';
-}
+}   

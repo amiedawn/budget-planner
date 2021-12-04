@@ -46,27 +46,34 @@ const initialExpenses = [
 ];
 
 function App() {
+  // all expenses, add expense
   const [expenses, setExpenses] = useState(initialExpenses);
+  // single name
   const [name, setName] = useState(" ");
+  // single amount
   const [amount, setAmount] = useState(" ");
 
+  // record anything that is typed in the name field
   const handleName = e => {
     setName(e.target.value)
   };
 
+  // record anything typed in the amount field
   const handleAmount = (e) => {
     setAmount(e.target.value);
   };
 
+  // don't let form re-render constantly
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (name !== '' && amount > 0) {
+    if (name !== "" && amount > 0) {
       const singleExpense = { id: uuidv4(), name: name, amount: amount}
       setExpenses([...expenses, singleExpense]) // add new expense to previous list
       setName("");
       setAmount("");
     } else {
       // handle alert called
+      alert("Please enter a valid expense!")
     }
   };
 
@@ -75,6 +82,11 @@ function App() {
       return (prev += parseInt(curr.amount));
     }, 0)}
   
+  // delete an expense
+  const handleDelete = (id) => {
+    let tempExpenses = expenses.filter(record => record.id !== id); 
+    setExpenses(tempExpenses);
+  };
 
   return (
     <div className="App">
@@ -87,10 +99,10 @@ function App() {
           <Remaining />
         </div>
         <div>
-          <Spent totalExpenses={totalExpenses} />
+          <Spent totalExpenses />
         </div>
       </div>
-      <Expenses expenses={expenses} />
+      <Expenses expenses={expenses} handleDelete={handleDelete} />
       <AddExpenseForm
         name={name}
         amount={amount}
@@ -99,16 +111,17 @@ function App() {
         handleSubmit={handleSubmit}
       />
       <h1>
-        Total spending: <span className="total">
-        ${expenses.reduce((prev, curr) => {
-            return (prev += parseInt(curr.amount));
-        }, 0)}
-
+        Total spending:{" "}
+        <span className="total">
+          $
+          {expenses.reduce((tot, curr) => {
+            return (tot += parseInt(curr.amount));
+          }, 0)}
         </span>
       </h1>
 
       <div className="total"></div>
-    </div>  
+    </div>
   );
 };
 

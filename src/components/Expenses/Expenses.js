@@ -2,7 +2,7 @@ import React from 'react';
 import ExpenseItem from '../ExpenseItem/ExpenseItem';
 import './ExpensesStyle.css';
 
-const Expenses = ({ expenses }) => {  
+const Expenses = ({ expenses, handleDelete }) => {  
   return (
     <div className="expenses-container">
       <h2 id="expenses-title">Expenses</h2>
@@ -15,11 +15,9 @@ const Expenses = ({ expenses }) => {
         />
         <ul className="expense-list">
           {expenses.map((expense) => {
-            return <ExpenseItem key={expense.id} expense={expense} />;
+            return <ExpenseItem key={expense.id} expense={expense} handleDelete={handleDelete} />;
           })}
         </ul>
-        {/* clear all button logic here with onclick button handler (not required) */}
-
       </form>
     </div>
   );
