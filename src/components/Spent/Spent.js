@@ -12,7 +12,7 @@ const Spent = ({expenses}) => {
           }, 0)}
         </span>
       </h3>
-    </div>
+     </div>
   );
 }
 

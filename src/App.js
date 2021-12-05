@@ -54,8 +54,8 @@ function App() {
   const [amount, setAmount] = useState(" ");
 
   // record anything that is typed in the name field
-  const handleName = e => {
-    setName(e.target.value)
+  const handleName = (e) => {
+    setName(e.target.value);
   };
 
   // record anything typed in the amount field
@@ -67,26 +67,24 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name !== "" && amount > 0) {
-      const singleExpense = { id: uuidv4(), name: name, amount: amount}
-      setExpenses([...expenses, singleExpense]) // add new expense to previous list
+      const singleExpense = { id: uuidv4(), name: name, amount: amount };
+      setExpenses([...expenses, singleExpense]); // add new expense to previous list
       setName("");
       setAmount("");
     } else {
       // handle alert called
-      alert("Please enter a valid expense!")
+      alert("Please enter a valid expense!");
     }
   };
 
-  // const totalExpenses = (e) => {
-  //   expenses.reduce((prev, curr) => {
-  //     return (prev += parseInt(curr.amount));
-  //   }, 0)}
-  
   // delete an expense
   const handleDelete = (id) => {
-    let tempExpenses = expenses.filter(record => record.id !== id); 
+    let tempExpenses = expenses.filter((record) => record.id !== id);
     setExpenses(tempExpenses);
   };
+
+  // search function
+  // const [query, setQuery] = useState(" ");
 
   return (
     <div className="App">
@@ -96,16 +94,43 @@ function App() {
           <Budget />
         </div>
         <div>
-          <Remaining />
+          <Remaining expenses={expenses} />
         </div>
         <div>
           <Spent expenses={expenses} />
         </div>
       </div>
+     
+      {/* <div>
+        <h2>Expenses</h2>
+        <input
+          placeholder="Type to search..."
+          onChange={(event) => setQuery(event.target.value)}
+        />
+        {
+          expenses.filter(expense => {
+            if (query === "") {
+              return expense;
+            } else if (
+              expense.name.toLowerCase().includes(query.toLowerCase())
+            ) {
+              return expense;
+            }
+          })
+          .map((expense, index) => (
+            <ul>
+              <li key={expense.id}>{expense.name}</li>
+            </ul>
+          ))
+        }
+      </div> */}
+
       <Expenses expenses={expenses} handleDelete={handleDelete} />
+
       <AddExpenseForm
         name={name}
         amount={amount}
+        
         handleName={handleName}
         handleAmount={handleAmount}
         handleSubmit={handleSubmit}

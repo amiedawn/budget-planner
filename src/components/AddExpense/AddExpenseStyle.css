@@ -2,6 +2,10 @@
   display: flex;
 }
 
+.form-title {
+  margin-left: 10px;
+}
+
 .form-group {
   padding: 1rem 0.75rem;
   flex: 0 0 40%;
@@ -32,7 +36,7 @@ label {
   line-height: 30px;
   padding: 0 16px;
   margin-left: 10px;
-  display: flex;
+  /* display: flex; */
   align-items: center;
 }
 

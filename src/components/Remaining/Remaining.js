@@ -1,11 +1,12 @@
 import React from 'react';
 import './RemainingStyle.css';
 
-function Remaining(props) {
+const Remaining = ({expenses, tot}) => {
+  let remaining = 2000 - {tot}
   return (
     <div className="remaining-container">
-      <h3 className="remaining-title">Remaining: $1040</h3>
-    </div>
+      <h3 className="remaining-title">Remaining: ${remaining}</h3>
+    </div>  
   );
 }
 
