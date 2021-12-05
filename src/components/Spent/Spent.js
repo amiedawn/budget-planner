@@ -1,10 +1,17 @@
 import React from 'react';
 import './SpentStyle.css';
 
-const Spent = (props) => {
+const Spent = ({expenses}) => {
   return (
     <div className="spent-container">
-      <h3 className="spent-title">Spent so far: ${props.totalExpenses}</h3>
+      <h3>
+        <span className="spent-title">
+          Spent so far: $
+          {expenses.reduce((tot, curr) => {
+            return (tot += parseInt(curr.amount));
+          }, 0)}
+        </span>
+      </h3>
     </div>
   );
 }

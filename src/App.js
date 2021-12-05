@@ -77,10 +77,10 @@ function App() {
     }
   };
 
-  const totalExpenses = (e) => {
-    expenses.reduce((prev, curr) => {
-      return (prev += parseInt(curr.amount));
-    }, 0)}
+  // const totalExpenses = (e) => {
+  //   expenses.reduce((prev, curr) => {
+  //     return (prev += parseInt(curr.amount));
+  //   }, 0)}
   
   // delete an expense
   const handleDelete = (id) => {
@@ -99,7 +99,7 @@ function App() {
           <Remaining />
         </div>
         <div>
-          <Spent totalExpenses />
+          <Spent expenses={expenses} />
         </div>
       </div>
       <Expenses expenses={expenses} handleDelete={handleDelete} />
@@ -110,17 +110,6 @@ function App() {
         handleAmount={handleAmount}
         handleSubmit={handleSubmit}
       />
-      <h1>
-        Total spending:{" "}
-        <span className="total">
-          $
-          {expenses.reduce((tot, curr) => {
-            return (tot += parseInt(curr.amount));
-          }, 0)}
-        </span>
-      </h1>
-
-      <div className="total"></div>
     </div>
   );
 };

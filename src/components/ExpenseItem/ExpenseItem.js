@@ -12,6 +12,6 @@ const ExpenseItem = ({expense, handleDelete}) => {
       </button>
     </div>
   </li>;
-}
+};
 
 export default ExpenseItem;
