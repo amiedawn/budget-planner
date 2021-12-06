@@ -3,7 +3,9 @@ import ExpenseItem from "../ExpenseItem/ExpenseItem";
 import "./ExpensesStyle.css";
 
 const Expenses = ({ expenses, handleDelete }) => {
+  // set state for search box
   const [query, setQuery] = useState(" ");
+  
   return (
     <div className="expenses-container">
       <div className="search-section">

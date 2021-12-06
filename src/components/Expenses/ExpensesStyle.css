@@ -18,10 +18,10 @@
  div.info {
   padding: 8px;
   border: 1px solid black;
-  display: inline-grid; 
   justify-content: space-between;
   width: 100%;
   align-items: center;
+  display: grid;
 }
 
  #item1 {
