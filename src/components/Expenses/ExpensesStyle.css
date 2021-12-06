@@ -23,6 +23,7 @@
   width: 100%;
   align-items: center;
 }
+
  #item1 {
    grid-column: 1 / span 6;
  }

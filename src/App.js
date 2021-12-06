@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
 import AddExpenseForm from './components/AddExpense/AddExpenseForm';
-import Budget from './components/Budget/Budget';
 import Expenses from './components/Expenses/Expenses';
-import Remaining from './components/Remaining/Remaining';
-import Spent from './components/Spent/Spent';
+import Totals from './components/Totals/Totals';
 import {v4 as uuidv4 } from 'uuid';
 
 const initialExpenses = [
@@ -83,54 +81,13 @@ function App() {
     setExpenses(tempExpenses);
   };
 
-  // search function
-  // const [query, setQuery] = useState(" ");
-
   return (
     <div className="App">
-      <h1>My Budget Planner</h1>
-      <div className="wrapper">
-        <div>
-          <Budget />
-        </div>
-        <div>
-          <Remaining expenses={expenses} />
-        </div>
-        <div>
-          <Spent expenses={expenses} />
-        </div>
-      </div>
-     
-      {/* <div>
-        <h2>Expenses</h2>
-        <input
-          placeholder="Type to search..."
-          onChange={(event) => setQuery(event.target.value)}
-        />
-        {
-          expenses.filter(expense => {
-            if (query === "") {
-              return expense;
-            } else if (
-              expense.name.toLowerCase().includes(query.toLowerCase())
-            ) {
-              return expense;
-            }
-          })
-          .map((expense, index) => (
-            <ul>
-              <li key={expense.id}>{expense.name}</li>
-            </ul>
-          ))
-        }
-      </div> */}
-
+      <Totals expenses={expenses} />
       <Expenses expenses={expenses} handleDelete={handleDelete} />
-
       <AddExpenseForm
         name={name}
         amount={amount}
-        
         handleName={handleName}
         handleAmount={handleAmount}
         handleSubmit={handleSubmit}

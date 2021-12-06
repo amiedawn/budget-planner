@@ -1,0 +1,53 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper > div {
+  width: 30%;
+  height: 6em;
+}
+
+.budget-container, .remaining-container, .totals-container {
+  background-color: lightgray;
+  display: flex;
+  position: relative;
+  align-items: center; /* vertically centers the button */
+}
+
+.budget-title, .remaining-title, .totals-container {
+  height: 100px;
+  line-height: 100px;
+  padding-left: 15px;
+}
+
+.budget-title {
+   color: gray;
+}
+
+.remaining-title {
+  color: green;
+}
+
+.totals-title {
+  color: blue;
+}
+
+.budget-edit {
+  background-color: blue;
+  color: white;
+  height: 35px;
+  width: 55px;
+  text-align: center;
+  position: absolute;
+  right: 30px;
+}
+
+.remaining-container {
+  background-color: lightgreen;
+}
+
+.totals-container {
+  background-color: lightblue;
+}
+
