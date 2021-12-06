@@ -21,8 +21,24 @@
   padding-left: 15px;
 }
 
+label {
+  color: gray;
+  font-weight: bold;
+  margin-left: 12px;
+  font-size: 18px;
+}
+
 .budget-title {
-   color: gray;
+  color: gray;
+  background-color: lightgray;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  width: 70px;
+  height: 60px;
+  outline: none;
+  margin-left: 0px;
+
 }
 
 .remaining-title {
