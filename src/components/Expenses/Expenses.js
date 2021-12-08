@@ -44,14 +44,6 @@ const Expenses = ({ expenses, handleDelete }) => {
           })}
       </ul>
     </div>
-
-    // <div className="expenses-container">
-    //   <ul className="expense-list">
-    //       {expenses.map((expense) => {
-    //         return <ExpenseItem key={expense.id} expense={expense} handleDelete={handleDelete} />;
-    //       })}
-    //     </ul>
-    // </div>
   );
 };
 
