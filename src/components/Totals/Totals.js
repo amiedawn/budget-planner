@@ -4,6 +4,11 @@ import "./TotalsStyle.css";
 const Totals = ({ expenses }) => {
 
   const [budget, setBudget] = useState(2000);
+  const [disabled, setDisabled] = useState(true);
+
+  function handleBudgetClick() {
+    setDisabled(!disabled);
+  };
 
   let totalSpent = 
     expenses.reduce((tot, curr) => {
@@ -18,9 +23,12 @@ const Totals = ({ expenses }) => {
       <div className="wrapper">
         <div className="budget-container">
           <label htmlFor="budget">Budget: $</label>
-          <input type="text" className="budget-title" name="budget" value={budget} 
-          onChange={(e) => setBudget(e.target.value)} />
-          <button className="budget-edit">Edit</button>
+          <input type="text" className="budget-title" name="budget" value={budget} disabled={disabled}
+          onChange={(e) => setBudget(e.target.value)}
+           />
+         {/*button starts as edit: when you can edit, the button says save; if you cannot edit, button says edit */}
+          {disabled === true && <input type="submit" className="budget-edit" onClick={handleBudgetClick} value="Edit" />}
+          {disabled === false && <input type="submit" className="budget-edit" onClick={handleBudgetClick} value="Save" />}
         </div>
         <div className="remaining-container">
           <h3 className="remaining-title">Remaining: ${remaining}</h3>

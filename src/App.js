@@ -75,6 +75,8 @@ function App() {
     }
   };
 
+
+
   // delete an expense
   const handleDelete = (id) => {
     let tempExpenses = expenses.filter((expense) => expense.id !== id);
