@@ -4,6 +4,8 @@ import "./TotalsStyle.css";
 const Totals = ({ expenses }) => {
 
   const [budget, setBudget] = useState(2000);
+  
+  // set state for edit button
   const [disabled, setDisabled] = useState(true);
 
   function handleBudgetClick() {
